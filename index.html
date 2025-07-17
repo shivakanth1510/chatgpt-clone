@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>ChatGPT</h1>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn-secondary">Log in</button>
+                <button class="btn-primary">Sign up for free</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Temporary Chat Notice -->
+        <div class="temp-chat-notice">
+            <h2>Temporary Chat</h2>
+            <p>This chat won't appear in history or be used to train our models. For safety purposes, we may keep a copy of this chat for up to 30 days.</p>
+        </div>
+
+        <!-- Chat Conversation Area -->
+        <div class="chat-container" id="chatContainer">
+            <!-- Chat messages will be dynamically added here -->
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput" 
+                        placeholder="Ask anything..." 
+                        rows="1"
+                        maxlength="4000"
+                    ></textarea>
+                    <button id="sendButton" class="send-button" disabled>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 1L15 8L8 15M15 8H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="attachButton" class="action-btn">
+                        <span>📎</span>
+                        Attach
+                    </button>
+                    <button id="searchButton" class="action-btn">
+                        <span>🔍</span>
+                        Search
+                    </button>
+                    <button id="voiceButton" class="action-btn">
+                        <span>🎤</span>
+                        Voice
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Error Message Display -->
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>By messaging ChatGPT, you agree to our <a href="#" class="footer-link">Terms</a> and have read our <a href="#" class="footer-link">Privacy Policy</a>.</p>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
